@@ -246,8 +246,8 @@ All of this is free software available on Github. It's very flexible but barely 
 
 If you wan to gain SSH access, you'll have to enable it from a running Pi (using a screen and a keyboard). Console credentials are `user` / `raspberry`. Enable SSH with `sudo systemctl enable --now ssh`.
 
-You can also change the SSID and password among otherthing by tweaking the `/boot/offspot.yaml` file. Check its [documentation](https://github.com/offspot/offspot-config).
+You can also change the SSID and password among other things by tweaking the `/boot/offspot.yaml` file. Check its [documentation](https://github.com/offspot/offspot-config).
 
-Check out the `/data` partition content. You can manually add ZIM files into `/data/contents/zims/` and after a reboot, they'll appear on the dashb oard.
+Check out the `/data` partition content. You can manually add ZIM files into `/data/contents/zims/` and after a reboot, they'll appear on the dashboard.
 
 Except for the WiFi Access Point (`hostapd`), everything related to Kiwix Hotspot runs as Docker containers so there's little risk for you to break anything. Go wild, it's your machine after all!
