@@ -7,8 +7,8 @@ A *Kiwix Hotspot* is a WiFi network that anyone (or those with its password) can
 
 > [!WARNING]
 > This guide is intended for DIY enthusiasts that are computer savvy.
-> You'll be mostly using the command-line and even writting some very-simple copy-paste-able code.
-> Nothing difficult but you'll need to figure out how to get the mentioned tools.
+> You'll be mostly using the command-line and even writing some very simple copy-paste-able code.
+> Nothing difficult but you will need to figure out by yourself how to access the tools mentioned.
 
 
 ## Gathering Hardware
