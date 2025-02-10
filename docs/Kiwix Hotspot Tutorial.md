@@ -37,7 +37,7 @@ Believe it or not, this is the most tedious and difficult step yet that's the on
 
 > [!IMPORTANT]
 > If following this guide for the first time, just find a couple of small content or use our suggestions.
-> Once you've copmpleted all the steps and it's working as expected, you can restart from here with
+> Once you have completed all the steps and it's working as expected, you can restart from here with
 > your carefuly curated content list. You dont want typos and long downloads to come in the way and lead
 > to long and frustrating attempts.
 
@@ -57,7 +57,7 @@ The's a notion of *Title ID* in Kiwix Hotspot that's not really exposed anywhere
 
 Keep a list of your IDs, you'll need them for next step.
 
-All of them must be three part, seperated by `:`. Last part can be empty.
+All of them must be three part, separated by `:`. Last part can be empty.
 
 
 ## Step 2: Build the Image's YAML recipe
