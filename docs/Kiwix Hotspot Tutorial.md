@@ -248,7 +248,7 @@ You can then use a phone or laptop to connect to the new WiFi network named afte
 
 All of this is free software available on Github. It's very flexible but barely documented. Feel free to ask questions on the Issue Tracker of this repo though!
 
-If you wan to gain SSH access to your Hotspot, you'll have to enable it from a running Pi (e.g. using a screen and a keyboard). Console credentials are `user` / `raspberry`. Enable SSH with `sudo systemctl enable --now ssh`.
+If you wan to gain SSH access to your Hotspot, you'll have to enable it from a running Pi (using a screen and a keyboard). Console credentials are `user` / `raspberry`. Enable SSH with `sudo systemctl enable --now ssh`.
 
 You can also change the SSID and password among other things by tweaking the `/boot/offspot.yaml` file. Check its [documentation](https://github.com/offspot/offspot-config).
 
