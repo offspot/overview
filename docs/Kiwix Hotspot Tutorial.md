@@ -31,7 +31,7 @@ Hardware is very simple but there are a couple of things not to overlook.
 > [!NOTE]
 > Out of scope for this guide but it's possible to use an SSD instead of an SD-card for better speed and reliability.
 > Make sure you master SD-card version first though.
-> It is also possible (but less recommendedable, and out of scope as well) to use an external USB drive plugged into the Pi.
+> It is also possible (but less recommended, and out of scope as well) to use an external USB drive plugged into the Pi.
 
 ## Step 1: identify the content you want to include
 
