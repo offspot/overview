@@ -91,6 +91,44 @@ First, install required dependencies:
 
 Now copy the [`tuto-builder.py`](tuto-builder.py) script and edit its variables at the top of the file.
 
+```py
+# where to write the resulting YAML file to
+YAML_CONFIG_PATH = "conf.yaml"
+
+#
+# SETTINGS
+#
+#
+NAME = "My Hotspot"
+# main domain to access your domain: xxx.hotspot. ASCII, numbers and dash
+DOMAIN = "my-kiwix"
+# SSID: max 32 chars. Forbidden chars: ^ ! # ; + \ / " \t
+SSID = "My SSID"
+# PASS: max 64 chars. No ASCII control characters. Leave empty for Open network
+PASSPHRASE = ""
+TIMEZONE = "UTC"
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "admin-password"
+BRANDING_HORIZONTAL_LOGO_PATH = ""
+BRANDING_SQUARE_LOGO_PATH = ""
+
+#
+# CONTENT SELECTION
+#
+# Title IDs for your ZIM files
+ZIM_TITLES = [
+    "openZIM:wikipedia_en_climate_change:nopic",
+    "openZIM:raspberrypi.stackexchange.com_en_all:all",
+]
+# Package IDs from
+# https:/github.com/offspot/offspot-config/blob/main/src/offspot_config/catalog.json
+PACKAGES = [
+    "file-manager.offspot.kiwix.org",
+]
+# URL to a ZIP file which content will be served in the files-resources app
+FILES_APP_ZIP_URL = ""
+```
+
 Run the file once satisfied:
 
 ```sh
