@@ -160,56 +160,31 @@ This step requires you to be **root on a GNU/Linux machine**. You can use WSL2 o
 
 First, download the lastest version of [`image-creator`](https://github.com/offspot/image-creator) [from the drive](https://drive.offspot.it/image-creator/): `1.1.3` as I'm writing.
 
-Make sure all requirements are satisfied by running it without valid inputs:
+Make sure all requirements are satisfied:
+
+**Kernel features**:
+
+- `loop` must be enabled in your kernel or as a module. if running inside a docker-container: `loop` must be enabled in host kernel as well. Container must be run with `--privileged`.
+- `ext4` filesystem (most likely enabled in-kernel)
+
+**Tools:**
+
+- `losetup`, `mount`, `umoun` (`mount`)
+-  `parted`, `partprobe` (`parted`)
+-  `resize2fs` (`e2fsprogs`)
+-  `qemu-img` (`qemu-utils`)
+-  `mknod` (`coreutils`)
+-  `dmsetup` (`dmsetup`)
+
+**Sample setup (debian)**
 
 ```sh
-❯ ./image-creator conf.yaml out.img
-
-  _                                                      _
- (_)_ __ ___   __ _  __ _  ___        ___ _ __ ___  __ _| |_ ___  _ __
- | | '_ ` _ \ / _` |/ _` |/ _ \_____ / __| '__/ _ \/ _` | __/ _ \| '__|
- | | | | | | | (_| | (_| |  __/_____| (__| | |  __/ (_| | || (_) | |
- |_|_| |_| |_|\__,_|\__, |\___|      \___|_|  \___|\__,_|\__\___/|_|
-                    |___/                                       v1.1.3|py3.11.9
-
-
-[2025-02-10 10:23:24] :: Checking system requirements
-[2025-02-10 10:23:24]    => Checking uid
-[2025-02-10 10:23:24]    => Checking binary dependencies  Missing binaries: dmsetup, partprobe, qemu-img
-[2025-02-10 10:23:24]    => Checking loop-device capability
-[2025-02-10 10:23:24]    => Checking ext4 support
-
-Requirements
-------------
-
-kernel features:
-    - `loop` must be enabled in your kernel or as a module
-       if running inside a docker-container:
-        - same loop feature applies to host's kernel
-        - container must be run with --privileged
-    - `ext4` filesystem (most likely enabled in-kernel)
-
-tools:
-    - losetup (mount)
-    - parted (parted)
-    - resize2fs (e2fsprogs)
-    - mount (mount)
-    - umount (mount)
-    - qemu-img (qemu-utils)
-    - partprobe (parted)
-    - mknod (coreutils)
-    - dmsetup (dmsetup)
-
-Sample setup (debian)
 sudo modprobe --first-time loop
 sudo modprobe --first-time ext4
-sudo apt-get install --no-install-recommends coreutils dmsetup                                              mount e2fsprogs qemu-utils parted
-Step CheckRequirements returned 2
-[2025-02-10 10:23:24]  Cleaning-up ..
-[2025-02-10 10:23:24]  Cleaning-up ..
+sudo apt-get install --no-install-recommends coreutils dmsetup mount e2fsprogs qemu-utils parted
 ```
 
-Missing requirements will be printed if any. **Sort this out first**!
+Any missing requirements will be printed when running `image-creator`. **Sort those out first**!
 
 ### Build the image
 
