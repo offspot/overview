@@ -3,21 +3,22 @@
 > [!TIP]
 > If you're just interested in such an Hotspot but are not into DIY, check-out [Kiwix's Website](https://kiwix.org/en/wifi-hotspot/).
 
-A *Kiwix Hotspot* is a WiFi network that anyone (or those with its password) can connect to and get prompted with a list of Web-resources replicas to access directly. No Internet access required. Only a Raspberry Pi, it's SD card and a source of power for the Pi.
+A *Kiwix Hotspot* is a mini-computer exposing a WiFi network that anyone (or those with its password) can connect to and get prompted with a list of Web-resources replicas to access directly. No Internet access required. Only a Raspberry Pi, it's SD card and a source of power for the Pi.
 
 > [!WARNING]
 > This guide is intended for DIY enthusiasts that are computer savvy.
 > You'll be mostly using the command-line and even writing some very simple copy-paste-able code.
 > Nothing difficult but you will need to figure out by yourself how to access the tools mentioned.
+> This tutorial is not **the only solution** to deploy a Kiwix Hotspot, it is only a recommendation / guide around know-how on how to do this in a straightforward manner.
 
 
 ## Gathering Hardware
 
 Hardware is very simple but there are a couple of things not to overlook.
 
-- A **64b Raspberry Pi**. That's the only hardware we support.
+- A **64bits Raspberry Pi** (see table below). That's the only hardware we support.
 - Don't use a Pi Zero2W just yet. We don't support it (we will though).
-- **Appropriate Power Supply** for your Pi. Using an underated (or poor quality) power supply can lead to very weird issues that you wont be able to diagnose or even link to the power supply. Various Pi models have various requirements. See below. As all are 5V rated, using an higher capacity one is OK.
+- **Appropriate Power Supply** for your Pi. Using an underated (or poor quality) power supply can lead to very weird issues that you won't be able to diagnose or even link to the power supply. Various Pi models have various requirements. See below. As all are 5V rated, using an higher capacity one is OK.
 - **New, good quality SD-card**. In many cases, the SD-card speed will be your bottleneck. SD-card is somewhat fragile and degrades over use. Decent ones are cheap enough for you not to get the cheapest which will lead to trouble. There's no guidance on finding good quality ones but using a popular brand (Sandisk, Samsung) is usually enough.
 
 | Pi Model   | Min. Wattage | Min Amps |
@@ -30,6 +31,7 @@ Hardware is very simple but there are a couple of things not to overlook.
 > [!NOTE]
 > Out of scope for this guide but it's possible to use an SSD instead of an SD-card for better speed and reliability.
 > Make sure you master SD-card version first though.
+> It is also possible (but less recommended, and out of scope as well) to use an external USB drive plugged into the Pi.
 
 ## Step 1: identify the content you want to include
 
@@ -38,7 +40,7 @@ Believe it or not, this is the most tedious and difficult step yet that's the on
 > [!IMPORTANT]
 > If following this guide for the first time, just find a couple of small content or use our suggestions.
 > Once you have completed all the steps and it's working as expected, you can restart from here with
-> your carefuly curated content list. You dont want typos and long downloads to come in the way and lead
+> your carefuly curated content list. You don't want typos and long downloads to come in the way and lead
 > to long and frustrating attempts.
 
 **Suggestion**:
@@ -57,23 +59,25 @@ The's a notion of *Title ID* in Kiwix Hotspot that's not really exposed anywhere
 
 Keep a list of your IDs, you'll need them for next step.
 
-All of them must be three part, separated by `:`. Last part can be empty.
+All of them must be three part, separated by `:`. Last part (flavour) can be empty.
 
 
 ## Step 2: Build the Image's YAML recipe
 
-That's the scary code-involving step. The approach here is to provide you with a sample source file that constructs and image YAML file
+That's the scary code-involving step. The approach here is to provide you with a sample source file that constructs an image YAML file
 from some variables at the top. This way, you can simply change those variables and you should be good to go.
 If you're comfortable with Python, go crazy!
 
-This step requires a **working Python3** installation. You can use WSL2 on Windows or Docker if you prefer:
+This step requires a **working Python3** installation. You can use WSL2 on Windows or Docker if you prefer.
+
+With Docker:
 
 ```sh
 # getting a shell with a working Python setup using Docker
 ❯ docker run -v $PWD:/data -it python:3.11-bookworm bash
 ```
 
-If you dont use Docker, make sure to be on an isolated virtualenv:
+Or if you don't use Docker, make sure to be on an isolated virtualenv:
 
 ```sh
 ❯ python3 -m venv tuto-env && source tuto-env/bin/activate
@@ -85,7 +89,45 @@ First, install required dependencies:
 ❯ pip install offspot-config
 ```
 
-Now copy the [`tuto-builder.py`](tuto-builder.py) script and edit its variables on the top of the file.
+Now copy the [`tuto-builder.py`](tuto-builder.py) script and edit its variables at the top of the file.
+
+```py
+# where to write the resulting YAML file to
+YAML_CONFIG_PATH = "conf.yaml"
+
+#
+# SETTINGS
+#
+#
+NAME = "My Hotspot"
+# main domain to access your domain: xxx.hotspot. ASCII, numbers and dash
+DOMAIN = "my-kiwix"
+# SSID: max 32 chars. Forbidden chars: ^ ! # ; + \ / " \t
+SSID = "My SSID"
+# PASS: max 64 chars. No ASCII control characters. Leave empty for Open network
+PASSPHRASE = ""
+TIMEZONE = "UTC"
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "admin-password"
+BRANDING_HORIZONTAL_LOGO_PATH = ""
+BRANDING_SQUARE_LOGO_PATH = ""
+
+#
+# CONTENT SELECTION
+#
+# Title IDs for your ZIM files
+ZIM_TITLES = [
+    "openZIM:wikipedia_en_climate_change:nopic",
+    "openZIM:raspberrypi.stackexchange.com_en_all:all",
+]
+# Package IDs from
+# https:/github.com/offspot/offspot-config/blob/main/src/offspot_config/catalog.json
+PACKAGES = [
+    "file-manager.offspot.kiwix.org",
+]
+# URL to a ZIP file which content will be served in the files-resources app
+FILES_APP_ZIP_URL = ""
+```
 
 Run the file once satisfied:
 
@@ -108,7 +150,7 @@ Writing YAML to conf.yaml
 Done.
 ```
 
-You file is ready for next step.
+Your YAML configuration file is ready for next step.
 
 ## Step 3: Build the Image (downloads everything)
 
@@ -118,62 +160,37 @@ This step requires you to be **root on a GNU/Linux machine**. You can use WSL2 o
 
 First, download the lastest version of [`image-creator`](https://github.com/offspot/image-creator) [from the drive](https://drive.offspot.it/image-creator/): `1.1.3` as I'm writing.
 
-Make sure all requirements are satisfied by running it without valid inputs:
+Make sure all requirements are satisfied:
+
+**Kernel features**:
+
+- `loop` must be enabled in your kernel or as a module. if running inside a docker-container: `loop` must be enabled in host kernel as well. Container must be run with `--privileged`.
+- `ext4` filesystem (most likely enabled in-kernel)
+
+**Tools:**
+
+- `losetup`, `mount`, `umoun` (`mount`)
+-  `parted`, `partprobe` (`parted`)
+-  `resize2fs` (`e2fsprogs`)
+-  `qemu-img` (`qemu-utils`)
+-  `mknod` (`coreutils`)
+-  `dmsetup` (`dmsetup`)
+
+**Sample setup (debian)**
 
 ```sh
-❯ ./image-creator conf.yaml out.img
-
-  _                                                      _
- (_)_ __ ___   __ _  __ _  ___        ___ _ __ ___  __ _| |_ ___  _ __
- | | '_ ` _ \ / _` |/ _` |/ _ \_____ / __| '__/ _ \/ _` | __/ _ \| '__|
- | | | | | | | (_| | (_| |  __/_____| (__| | |  __/ (_| | || (_) | |
- |_|_| |_| |_|\__,_|\__, |\___|      \___|_|  \___|\__,_|\__\___/|_|
-                    |___/                                       v1.1.3|py3.11.9
-
-
-[2025-02-10 10:23:24] :: Checking system requirements
-[2025-02-10 10:23:24]    => Checking uid
-[2025-02-10 10:23:24]    => Checking binary dependencies  Missing binaries: dmsetup, partprobe, qemu-img
-[2025-02-10 10:23:24]    => Checking loop-device capability
-[2025-02-10 10:23:24]    => Checking ext4 support
-
-Requirements
-------------
-
-kernel features:
-    - `loop` must be enabled in your kernel or as a module
-       if running inside a docker-container:
-        - same loop feature applies to host's kernel
-        - container must be run with --privileged
-    - `ext4` filesystem (most likely enabled in-kernel)
-
-tools:
-    - losetup (mount)
-    - parted (parted)
-    - resize2fs (e2fsprogs)
-    - mount (mount)
-    - umount (mount)
-    - qemu-img (qemu-utils)
-    - partprobe (parted)
-    - mknod (coreutils)
-    - dmsetup (dmsetup)
-
-Sample setup (debian)
 sudo modprobe --first-time loop
 sudo modprobe --first-time ext4
-sudo apt-get install --no-install-recommends coreutils dmsetup                                              mount e2fsprogs qemu-utils parted
-Step CheckRequirements returned 2
-[2025-02-10 10:23:24]  Cleaning-up ..
-[2025-02-10 10:23:24]  Cleaning-up ..
+sudo apt-get install --no-install-recommends coreutils dmsetup mount e2fsprogs qemu-utils parted
 ```
 
-Missing requirements will be printed if any. **Sort this out first**!
+Any missing requirements will be printed when running `image-creator`. **Sort those out first**!
 
 ### Build the image
 
 Now run it referencing **your actual YAML config** from previous step. Make sure to check `--help` also.
 
-It is recommended to use a cache so that any subsequent attempt does not require re-downloading everything but it can be [cumbersome to configure](https://github.com/offspot/image-creator?tab=readme-ov-file#cache-policy) and this cache-dir **must be on an ext4** filesystem.
+It is recommended to use a cache for content which be downloaded, so that any subsequent attempts to build an image does not require re-downloading everything. But this cache can be [cumbersome to configure](https://github.com/offspot/image-creator?tab=readme-ov-file#cache-policy). And this cache-dir **must be on an ext4** filesystem.
 
 ```sh
 ❯ mkdir -p cache
@@ -211,7 +228,7 @@ It is recommended to use a cache so that any subsequent attempt does not require
 [...]
 ```
 
-You now have a `.img` file that is your *Raspberry Image File*.
+You now have a `.img` file which is your *Raspberry Image File*.
 
 ## Step 4: Flash the Image onto the SD-card
 
@@ -219,10 +236,10 @@ This is standard and you can use any tool you'd prefer for this.
 
 We recommend you [Download](https://www.raspberrypi.com/software/) and use **`rpi-imager`**.
 
-1. In *Operrating System*, select *Use Custom* at the very end of the list and pick the `.img` file you buyilt in previous step.
-2. In *Storage*, select your SD-card (ity must be attached to your computer obviously).
+1. In *Operating System*, select *Use Custom* at the very end of the list and pick the `.img` file you built in previous step.
+2. In *Storage*, select your SD-card (it must be attached to your computer obviously).
 3. Hit Next
-4. **Dont apply OS customisation**. This is not compatible with Kiwix Hotspot and will prevent it from booting.
+4. **Don't apply OS customisation**. This is not compatible with Kiwix Hotspot and will prevent it from booting.
 5. Once writing is complete, **don't cancel verify**. It's an essential step in trusting your SD-card.
 
 ![rpi-imager-1.png](rpi-imager-1.png)
@@ -233,21 +250,21 @@ You SD-card is now ready and can be removed from your computer.
 
 ## Step 5: First-boot and Go
 
-Insert your SD-card into the Pi and turn it on. You don't need to plug in a keyboard or a screen as it's meant to be connected to from other devices over WiFi.
+Insert your SD-card into the Pi and turn it on. You don't need to plug in a keyboard or a screen as the Hotspot is meant to be connected to from other devices over WiFi.
 
-**Be patient** during first boot as there is a file-system expansion step (so all free sapce on your SD card is available), a filesytem check then the device is rebooted and actual first boot happen with containers creation.
+**Be patient** during first boot as there is a file-system expansion step (so all free space on your SD card is available), a filesytem check, then the device is rebooted and actual first boot happen with containers creation.
 
-Then use a phone or laptop to connect to the new WiFi network named after your chosen SSID. You'll be prompted with the captive portal that will take you to the dashboard. **Enjoy!**
+You can then use a phone or laptop to connect to the new WiFi network named after your chosen SSID (in your conf.yaml). You'll be prompted with the captive portal that will take you to the dashboard. **Enjoy!**
 
 
 ### Beyond the tutotial
 
-All of this is free software available on Github. It's very flexible but barely documented. Feel free to ask questions on the Issue Tracker though!
+All of this is free software available on Github. It's very flexible but barely documented. Feel free to ask questions on the Issue Tracker of this repo though!
 
-If you wan to gain SSH access, you'll have to enable it from a running Pi (using a screen and a keyboard). Console credentials are `user` / `raspberry`. Enable SSH with `sudo systemctl enable --now ssh`.
+If you wan to gain SSH access to your Hotspot, you'll have to enable it from a running Pi (using a screen and a keyboard). Console credentials are `user` / `raspberry`. Enable SSH with `sudo systemctl enable --now ssh`.
 
 You can also change the SSID and password among other things by tweaking the `/boot/offspot.yaml` file. Check its [documentation](https://github.com/offspot/offspot-config).
 
-Check out the `/data` partition content. You can manually add ZIM files into `/data/contents/zims/` and after a reboot, they'll appear on the dashboard.
+Check out the `/data` partition content. You can manually add/remove ZIM files into `/data/contents/zims/` and after a reboot, they'll appear on the dashboard.
 
 Except for the WiFi Access Point (`hostapd`), everything related to Kiwix Hotspot runs as Docker containers so there's little risk for you to break anything. Go wild, it's your machine after all!
