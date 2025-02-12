@@ -1,6 +1,6 @@
-# offspot
+# Kiwix Hotspot
 
-offspot by Kiwix is a collection of tools and solutions to support **Kiwix Hotspot**.
+`offspot` is a collection of tools and solutions to support **Kiwix Hotspot**.
 
 | Tool                                                              | Description                                                                                                                                                                                                  |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -10,3 +10,5 @@ offspot by Kiwix is a collection of tools and solutions to support **Kiwix Hotsp
 | [`image-creator`](https://github.com/offspot/image-creator)       | _somewhat_-generic Image creator taking a YAML config as input. YAML config lists all files to download, and includes a complete docker-compose. This is not user-friendly at all. Linux only, runs as root. |
 | [Kiwix Imager Service](https://github.com/offspot/imager-service) | Web UI to select content. Uses the offspot-config builder to produce YAML. Calls image-creator in worker to build image then uploads it. https://imager.kiwix.org                                            |
 | Kiwix Imager App                                                  | **Not implemented yet**. kiwix-hotspot replacement. UI to select content and configure. Will use offspot-config builder to gen a YAML and call image-creator                                                 |
+
+➡️ [Create your own WiFi knowledge hub with Kiwix Hotspot](https://github.com/offspot/overview/blob/main/docs/Kiwix%20Hotspot%20Tutorial.md)
