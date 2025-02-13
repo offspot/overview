@@ -146,7 +146,7 @@ There's an expiration on that *registration* so that multiple users sharing a si
 
 The [`dashboard`](https://github.com/offspot/dashboard/) displays a cards/grid view of the content listed in a `home.yaml` file.
 
-> ![TIP]
+> [!TIP]
 > It also offers a special view to download the content for which a download link was supplied. That's very useful to allow users to download ZIM file as well as Kiwix Readers so they can copy from the Hotspot and continue hotspot-less on their Android device for instance
 
 ![dashboard.png](dashboard.png)
@@ -158,7 +158,7 @@ As other Hotspot App, dashboard is a Docker image. It is composed of:
 
 This allows a somewhat dynamic approach in that one can modify the `home.yaml` file and reboot to get an updated version but still benefit from a static, fast website.
 
-> ![TIP]
+> [!TIP]
 > It also features a ZIM discovery feature that checks the ZIM folder and automatically removes from the dashboard those that are not present anymore and adds any new one not listed in `home.yaml`. It does so by querying the ZIM itself for its metadata.
 > This happens at startup as well.
 
@@ -174,7 +174,7 @@ Some of them are special (reverse-proxy, captive-portal) and their integration i
 
 Those are listed in [`catalog.json`](https://github.com/offspot/offspot-config/blob/main/src/offspot_config/catalog.json) with their integration properties. This `catalog.json` is not standardized at all and will certainly change in the future.
 
-> ![NOTE]
+> [!NOTE]
 > Some apps in the Catalog are virtual (files packages) as those are simply ZIP files containing an HTML document and support files.
 > Those are exposed as individual web-apps to users but it's a single static web server behind the scene.
 > We use it for external download content like Android Apps.
