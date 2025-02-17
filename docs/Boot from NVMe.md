@@ -1,6 +1,6 @@
 # Boot from NVMe
 
-> [!INFO]
+> [!NOTE]
 > Kiwix Hotspot supports booting from NVME so you can follow anyother guide online ; this is just a reference.
 
 By default, all RaspberryPi are configured to boot from SD-card.
@@ -23,7 +23,7 @@ Flash your image onto the M.2 NVMe disk (via an NVME reader) using rpi-imager. T
 
 ## Enable PCI Express Gen.3
 
-> [!WARN]
+> [!WARNING]
 > Only do this is your NVMe HAT supports it (Argon NEO 5 M.2 NVME does)
 > Pi5 is certified for Gen 2.0 speeds (5 GT/sec) but can be forced to Gen 3.0 (8.0 GT/s)
 > Argon40 [recommends](https://cdn.shopify.com/s/files/1/0556/1660/2177/files/FOR_WEB_INSTRUCTION_MANUAL_NEO_5_M.2_NVMe_20240909.pdf?v=1725870016) enabling it.
