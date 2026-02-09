@@ -40,9 +40,3 @@ The pack provides **offline resources for emergency preparedness, survival skill
 | Trail Sense                 | Downloadable android APK that uses your phone's sensors.                                                |
 | USDA Guide to Home Canning        | Research-based recommendations for canning safer and better quality food at home.               |
 | Water Treatment Library           | Resources about water collection and purification.                                               |
-
-## **Features**
-
-| Feature                     | Description                                                                                     |
-|-------------------------------------|-------------------------------------------------------------------------------------------------|
-| File Manager                       | Upload and download documents.                                                                  |
