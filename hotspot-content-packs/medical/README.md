@@ -31,9 +31,3 @@ The pack provides **offline medical resources** for healthcare professionals, st
 | WikEM                               | The world's largest emergency medicine open-access resource.                                     |
 | WikiMed Medical Encyclopedia        | The largest medical encyclopedia, from Wikipedia.                                                |
 
-## **Features**
-
-| Features                     | Description                                                                                     |
-|-------------------------------------|-------------------------------------------------------------------------------------------------|
-| File Manager                       | Upload and download documents.                                                                  |
-
