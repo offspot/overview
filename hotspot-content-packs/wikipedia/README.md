@@ -11,9 +11,3 @@ Thw pack provides **offline access to the entire Wikipedia, Wiktionary, and incl
 | phet-simulations       | Interactive simulations helping students engage in science and mathematics.   |
 | raspberry-pi-qna       | Stack Exchange Q&A for users and developers of Raspberry Pi hardware or software  |
 
-## **Features**
-| Features             | Description                                      |
-|------------------------|--------------------------------------------------|
-| file-manager           | Upload and download documents.                   |
-
-
