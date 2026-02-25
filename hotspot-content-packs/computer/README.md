@@ -190,7 +190,10 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Moment.js Timezone Docs              | Moment.js Timezone documentation, by DevDocs.                                                    |
 | MongoDB Docs                        | MongoDB documentation, by DevDocs.                                                              |
 | Neos Wiki                           | Accelerate development of social VR applications.                                               |
+| Network Engineering Q&A             | Stack Exchange Q&A for network engineers.                                                       |
 | Next.js Docs                        | Next.js documentation, by DevDocs.                                                              |
+| nginx / Lua Module Docs             | nginx / Lua Module documentation, by DevDocs.                                                   |
+| nginx Docs                          | nginx documentation, by DevDocs.                                                                |
 | Nim Docs                            | Nim documentation, by DevDocs.                                                                  |
 | Nix Docs                            | Nix documentation, by DevDocs.                                                                  |
 | Node.js Docs                        | Node.js documentation, by DevDocs.                                                              |
@@ -203,10 +206,10 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Octave Docs                         | Octave documentation, by DevDocs.                                                               |
 | Open Data Q&A                       | Stack Exchange Q&A for developers and researchers interested in open data.                       |
 | Open Data Structures                | Data structures for lists, queues, dictionaries, and graphs.                                    |
+| Open Source Q&A                      | Stack Exchange Q&A for everything related to open source development projects.                  |
 | OpenGL Docs                         | OpenGL documentation, by DevDocs.                                                               |
 | OpenJDK Docs                        | OpenJDK documentation, by DevDocs.                                                              |
 | OpenLayers Docs                     | OpenLayers documentation, by DevDocs.                                                           |
-| OpenSource Q&A                      | Stack Exchange Q&A for everything related to open source development projects.                   |
 | OpenTSDB Docs                       | OpenTSDB documentation, by DevDocs.                                                             |
 | Operations Research Q&A             | Stack Exchange Q&A for everything related to operations research and analytics.                  |
 | Padrino Docs                        | Padrino documentation, by DevDocs.                                                              |
@@ -214,6 +217,7 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Perl Docs                           | Perl documentation, by DevDocs.                                                                 |
 | Phalcon Docs                        | Phalcon documentation, by DevDocs.                                                              |
 | Phaser Docs                         | Phaser documentation, by DevDocs.                                                               |
+| Phoenix Docs                         | Phoenix documentation, by DevDocs.                                                               |
 | PHP Docs                            | PHP documentation, by DevDocs.                                                                  |
 | PHP Manual                          | PHP Manual.                                                                                     |
 | PHPUnit Docs                        | PHPUnit documentation, by DevDocs.                                                              |
@@ -248,10 +252,10 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Redux Docs                          | Redux documentation, by DevDocs.                                                                |
 | Relay Docs                          | Relay documentation, by DevDocs.                                                                |
 | Requests Docs                       | Requests documentation, by DevDocs.                                                             |
-| Restarters                          | How things work and how to fix them.                                                            |
+| RequireJS Docs                      | RequireJS documentation, by DevDocs                                                            |
 | RethinkDB Docs                      | RethinkDB documentation, by DevDocs.                                                            |
 | Retrocomputing Q&A                  | Stack Exchange Q&A for vintage-computer hobbyists.                                              |
-| Reverse Engineering Q&A             | Stack Exchange Q&A for exploring systems through their structure, function, and...              |
+| Reverse Engineering Q&A             | Stack Exchange Q&A for exploring systems through their structure, function...                   |
 | Robotics Q&A                        | Stack Exchange Q&A for everything related to robotics.                                           |
 | Rosetta Code                        | Level up your creative problem solving skills.                                                  |
 | Ruby / Minitest Docs                | Ruby / Minitest documentation, by DevDocs.                                                       |
@@ -268,10 +272,23 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Scala Docs                          | Scala documentation, by DevDocs.                                                                |
 | scikit-image Docs                   | scikit-image documentation, by DevDocs.                                                         |
 | scikit-learn Docs                   | scikit-learn documentation, by DevDocs.                                                         |
-| Sequences Docs                      | Sequences documentation, by DevDocs.                                                            |
+| Sequelize Docs                      | Sequences documentation, by DevDocs.                                                            |
 | Server Fault                        | Stack Exchange Q&A for system and network administrators.                                       |
 | SharePoint Q&A                      | Stack Exchange Q&A for SharePoint enthusiasts.                                                  |
 | Signal Processing Q&A               | Stack Exchange Q&A for sound engineers, producers, editors, and enthusiasts.                    |
+| Sinon.JS Docs                       | Sinon.JS documentation, by DevDocs
+  |
+| Sitecore Q&A                        | Stack Exchange Q&A for developers and end users of the Sitecore software
+  |
+| Socket.IO Docs                      | Socket.IO documentation, by DevDocs
+  |
+| Software Engineering Q&A            | Stack Exchange Q&A for anyone working within the systems development life cycle
+  |
+| Software QA & Testing               | Stack Exchange Q&A for software quality control experts, automation engineers…                  |
+| Software Recommendations Q&A        | Stack Exchange Q&A for people seeking specific software recommendations                         |
+| Solana Q&A                          | Stack Exchange Q&A for Solana software users and developers
+  |
+| Sound Design Q&A                   | Stack Exchange Q&A for sound engineers, producers, editors, and enthusiasts                      |
 | Spring Boot Docs                    | Spring Boot documentation, by DevDocs.                                                          |
 | SQL Tutorials                       | Corey Schaffer's tutorials for software developers, programmers, and engineers.                  |
 | SQLite Docs                         | SQLite documentation, by DevDocs.                                                               |
