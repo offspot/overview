@@ -1,5 +1,3 @@
-IN PROGRESS (list to be reviewed)
-
 # Computer
 
 ## **Purpose & Audience**
@@ -93,7 +91,12 @@ This pack provides **comprehensive offline resources for developers, programmers
 | DuckDB Docs                         | DuckDB documentation, by DevDocs.                                                               |
 | Eigen3 Docs                         | Eigen3 documentation, by DevDocs.                                                               |
 | Electrical Engineering              | Q&A for electronics and electrical engineering professionals, students, and enthusiasts.         |
+| Electron Docs                       | Electron documentation, by DevDocs.                                                               |
+| Elisp Docs                       | Elisp documentation, by DevDocs.                                                               |
 | Elixir Docs                         | Elixir documentation, by DevDocs.                                                               |
+| Emacs Q&A                        | Stack Exchange Q&A for those using, extending or developing Emacs.                                                               |
+| Ember.js Docs                       | Ember.js documentation, by DevDocs.                                                               |
+| Enzyme Docs                         | Enzyme documentation, by DevDocs.                                                               |
 | Erlang Docs                         | Erlang documentation, by DevDocs.                                                               |
 | esbuild Docs                        | esbuild documentation, by DevDocs.                                                              |
 | ESLint Docs                         | ESLint documentation, by DevDocs.                                                               |
@@ -105,13 +108,15 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Flask Docs                          | Flask documentation, by DevDocs.                                                                |
 | Flask Tutorials                     | Corey Schaffer's tutorials for software developers, programmers, and engineers.                  |
 | Flow Docs                           | Flow documentation, by DevDocs.                                                                 |
-| Flutter Docs                        | Flutter documentation, by DevDocs.                                                              |
+| Fluture Docs                        | Fluture documentation, by DevDocs.                                                              |
+| FreeCodeCamp                        | All FreeCodeCamp courses.                                                                               |
 | FreeCodeCamp Interview Prep         | Coding exercises.                                                                               |
 | FreeCodeCamp JavaScript             | JavaScript courses.                                                                              |
 | Game Development Q&A                | Stack Exchange Q&A for professional and independent game developers.                             |
 | GCC Docs                            | GCC documentation, by DevDocs.                                                                  |
 | GenAI Q&A                           | Stack Exchange Q&A for everything related to Generative Artificial Intelligence.                 |
-| Gentoo Wiki                         | From Gentoo Wiki.                                                                                |
+| Gentoo Wiki (all_maxi)              | From Gentoo Wiki.                                                                                |
+| Gentoo Wiki (no_pics)               | From Gentoo Wiki.                                                                                |
 | Git Docs                            | Git documentation, by DevDocs.                                                                  |
 | Git Tutorials                       | Corey Schaffer's tutorials for software developers, programmers, and engineers.                  |
 | GNU Fortran Docs                    | GNU Fortran documentation, by DevDocs.                                                          |
@@ -125,12 +130,15 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Groovy Docs                         | Groovy documentation, by DevDocs.                                                               |
 | Grunt Docs                          | Grunt documentation, by DevDocs.                                                                |
 | GTK Docs                            | GTK documentation, by DevDocs.                                                                  |
+| Hammerspoon Docs                  | Hammerspoon documentation, by DevDocs.                                                        |
 | HandleBars.js Docs                  | HandleBars.js documentation, by DevDocs.                                                        |
 | Hapi Docs                           | Hapi documentation, by DevDocs.                                                                 |
 | HAProxy Docs                        | HAProxy documentation, by DevDocs.                                                              |
 | Hardware Recommendations Q&A        | Stack Exchange Q&A for people seeking specific hardware recommendations.                         |
+| Haskell Docs                        | Haskell documentation, by DevDocs.                                                                 |
 | Haxe Docs                           | Haxe documentation, by DevDocs.                                                                 |
 | Homebrew Docs                       | Homebrew documentation, by DevDocs.                                                             |
+| How to Design Programs              | Introductory book focused on the program design process.                                                                 |
 | HTML Docs                           | HTML documentation, by DevDocs.                                                                 |
 | htmx Docs                           | htmx documentation, by DevDocs.                                                                 |
 | HTTP Docs                           | HTTP documentation, by DevDocs.                                                                 |
@@ -169,12 +177,12 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Learning Statistics with R          | Introductory statistics class turned into a book.                                               |
 | Less CSS                            | It's CSS, with just a little more.                                                              |
 | Less Docs                           | Less documentation, by DevDocs.                                                                 |
-| Liquid Docs                         | Liquid documentation, by DevDocs.                                                               |
 | Linux man pages Docs                | Linux man pages documentation, by DevDocs.                                                       |
+| Liquid Docs                         | Liquid documentation, by DevDocs.                                                               |
 | lodash Docs                         | lodash documentation, by DevDocs.                                                               |
-| LOVE Docs                           | LÖVE documentation, by DevDocs.                                                                  |
 | Lua Docs                            | Lua documentation, by DevDocs.                                                                  |
 | Lua.org                             | All about the powerful, efficient, lightweight, embeddable scripting language.                  |
+| LÖVE Docs                           | LÖVE documentation, by DevDocs.                                                                  |
 | Magento Q&A                         | Stack Exchange Q&A for users of the Magento e-Commerce platform.                                |
 | ManKier - Linux man pages           | ManKier, a collection of Linux man pages, main documentation of Linux programs.                  |
 | MariaDB Docs                        | MariaDB documentation, by DevDocs.                                                              |
@@ -188,8 +196,9 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Modernizr Docs                      | Modernizr documentation, by DevDocs.                                                            |
 | Moment.js Docs                      | Moment.js documentation, by DevDocs.                                                            |
 | Moment.js Timezone Docs              | Moment.js Timezone documentation, by DevDocs.                                                    |
-| MongoDB Docs                        | MongoDB documentation, by DevDocs.                                                              |
-| Neos Wiki                           | Accelerate development of social VR applications.                                               |
+| Mongoose Docs                        | Mongoose documentation, by DevDocs.                                                              |
+| Neos Wiki (all_maxi)                | Accelerate development of social VR applications.                                               |
+| Neos Wiki (no pic)                  | Accelerate development of social VR applications.                                               |
 | Network Engineering Q&A             | Stack Exchange Q&A for network engineers.                                                       |
 | Next.js Docs                        | Next.js documentation, by DevDocs.                                                              |
 | nginx / Lua Module Docs             | nginx / Lua Module documentation, by DevDocs.                                                   |
@@ -276,18 +285,13 @@ This pack provides **comprehensive offline resources for developers, programmers
 | Server Fault                        | Stack Exchange Q&A for system and network administrators.                                       |
 | SharePoint Q&A                      | Stack Exchange Q&A for SharePoint enthusiasts.                                                  |
 | Signal Processing Q&A               | Stack Exchange Q&A for sound engineers, producers, editors, and enthusiasts.                    |
-| Sinon.JS Docs                       | Sinon.JS documentation, by DevDocs
-  |
-| Sitecore Q&A                        | Stack Exchange Q&A for developers and end users of the Sitecore software
-  |
-| Socket.IO Docs                      | Socket.IO documentation, by DevDocs
-  |
-| Software Engineering Q&A            | Stack Exchange Q&A for anyone working within the systems development life cycle
-  |
+| Sinon.JS Docs                       | Sinon.JS documentation, by DevDocs                                                              |
+| Sitecore Q&A                        | Stack Exchange Q&A for developers and end users of the Sitecore software                        |
+| Socket.IO Docs                      | Socket.IO documentation, by DevDocs                                                             |
+| Software Engineering Q&A            | Stack Exchange Q&A for anyone working within the systems development life cycle                 |
 | Software QA & Testing               | Stack Exchange Q&A for software quality control experts, automation engineers…                  |
 | Software Recommendations Q&A        | Stack Exchange Q&A for people seeking specific software recommendations                         |
-| Solana Q&A                          | Stack Exchange Q&A for Solana software users and developers
-  |
+| Solana Q&A                          | Stack Exchange Q&A for Solana software users and developers                                     |
 | Sound Design Q&A                   | Stack Exchange Q&A for sound engineers, producers, editors, and enthusiasts                      |
 | Spring Boot Docs                    | Spring Boot documentation, by DevDocs.                                                          |
 | SQL Tutorials                       | Corey Schaffer's tutorials for software developers, programmers, and engineers.                  |
