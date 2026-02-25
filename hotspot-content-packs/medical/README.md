@@ -7,10 +7,10 @@ The pack provides **offline medical resources** for healthcare professionals, st
 
 | ZIM File or App                     | Description                                                                                     |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Health                              | Q&A for professionals in medical and allied health fields, students of those professions.      |
 | Libre Pathology                     | A pathology knowledge base.                                                                     |
 | MDWiki Medical Encyclopedia         | Healthcare articles curated by WikiProjectMed.                                                   |
 | Medical Library                     | A collection of books pertaining to field and emergency medicine.                                |
+| Medical Sciences Q&A                | Stack Exchange Q&A for everything related to medicine and healthcare sciences      |
 | Medicine LibreTexts                 | Medicine courses and bookshelves from LibreTexts.org.                                            |
 | MedlinePlus                         | Trusted health information for you.                                                             |
 | Military Medicine                   | Doctrinal and instructional manuals.                                                            |
