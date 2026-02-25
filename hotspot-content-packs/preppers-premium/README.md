@@ -21,7 +21,6 @@ The pack provides the **ultimate offline survival and healthcare library**, desi
 | Food for Preppers                   | A collection of recipes and techniques for preparing food.                                      |
 | Gardening & Landscaping Q&A         | Stack Exchange Q&A for gardeners and landscapers.                                               |
 | GrimGrains Recipes                  | A collection of recipes by Rek Bell and Devine Lu Linvega.                                       |
-| Health                              | Q&A for professionals in medical and allied health fields, students of those professions.      |
 | Home Improvement Q&A                | Stack Exchange Q&A for contractors and serious DIYers.                                          |
 | Homebrewing Q&A                     | Stack Exchange Q&A for dedicated home brewers (beer, wine, etc.) and enthusiasts.               |
 | iFixit in English                   | A global community of people helping each other repair things.                                  |
@@ -30,6 +29,7 @@ The pack provides the **ultimate offline survival and healthcare library**, desi
 | Libre Pathology                     | A pathology knowledge base.                                                                     |
 | Lifehacks Q&A                       | Stack Exchange Q&A for bypassing life's everyday problems with simple tricks.                   |
 | MDWiki Medical Encyclopedia         | Healthcare articles curated by WikiProjectMed.                                                   |
+| Medical Sciences Q&A                | Stack Exchange Q&A for everything related to medicine and healthcare sciences      |
 | Medical Library                     | A collection of books pertaining to field and emergency medicine.                                |
 | Medicine LibreTexts                 | Medicine courses and bookshelves from LibreTexts.org.                                            |
 | MedlinePlus                         | Trusted health information for you.                                                             |
