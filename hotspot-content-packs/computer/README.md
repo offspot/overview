@@ -329,6 +329,7 @@ This pack provides **comprehensive offline resources for developers, programmers
 | TypeScript Docs                     | TypeScript documentation, by DevDocs.                                                           |
 | Underscore.js Docs                  | Underscore.js documentation, by DevDocs.                                                         |
 | Unix & Linux Q&A                    | Stack Exchange Q&A for users of Linux, FreeBSD and other Unix-like OS.                          |
+| UnrealIRCd Docs                     | UnrealIRCd documentation.                          |
 | User Experience Q&A                 | Stack Exchange Q&A for user experience researchers and experts.                                 |
 | Vagrant Docs                        | Vagrant documentation, by DevDocs.                                                              |
 | Varnish Docs                        | Varnish documentation, by DevDocs.                                                              |
