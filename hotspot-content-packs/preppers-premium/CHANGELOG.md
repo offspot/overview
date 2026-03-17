@@ -5,16 +5,19 @@ All notable changes to this content pack will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Version]
+## [20260317]
 
 ### Added
-- TBD
+- n/A
 
 ### Changed
-- TBD
+- n/a
 
 ### Fixed
-- TBD
+- n/a
 
 ### Removed
-- TBD
+- TED Health Care
+- TED Decision making
+- Surviving Residency
+- MDwiki Medical Library:en_all:maxi (smaller duplicate of Dwiki Medical Library:en_all)
