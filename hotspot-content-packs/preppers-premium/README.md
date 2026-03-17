@@ -40,14 +40,11 @@ The pack provides the **ultimate offline survival and healthcare library**, desi
 | Restarters                          | How things work and how to fix them.                                                            |
 | Solar Powered LowTech Magazine      | Not every problem has a high-tech solution.                                                     |
 | Survival Manual                     | Downloadable Android APK. Learn how to survive.                                                 |
-| Surviving Residency                     | Quick guides for medicine.                                                 |
 | Survivor Library                    | How to survive when the technology does not.                                                    |
 | TED agriculture                     | A collection of TED videos about agriculture.                                                   |
-| TED decision-making                 | A collection of TED videos about decision-making.                                               |
 | TED farming                         | A collection of TED videos about farming.                                                       |
 | TED gardening                       | A collection of TED videos about gardening.                                                     |
 | TED health                          | A collection of TED videos about health.                                                        |
-| TED health care                     | A collection of TED videos about health care.                                                   |
 | TED hearing                         | A collection of TED videos about hearing.                                                       |
 | TED heart                           | A collection of TED videos about heart.                                                         |
 | TED medical imaging                 | A collection of TED videos about medical imaging.                                               |
