@@ -9,3 +9,12 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 - UnrealIRCCD (https://browse.library.kiwix.org/#lang=&q=unreal): An open-source IRC server with support for IRCv3, SSL/TLS, cloaking and anti-flood/spam systems, compatible with Linux, OS X, and Windows.
+
+### Changed
+- n/a
+
+### Fixed
+- n/a
+
+### Removed
+- n/a
