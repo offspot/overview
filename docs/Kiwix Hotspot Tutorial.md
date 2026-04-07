@@ -46,8 +46,8 @@ Believe it or not, this is the most tedious and difficult step yet that's the on
 **Suggestion**:
 
 ```
-openZIM:wikipedia_en_climate_change:nopic
-openZIM:raspberrypi.stackexchange.com_en_all:all
+openZIM:wikipedia_en_climate-change:nopic
+openZIM:raspberrypi.stackexchange.com_en_all:
 ```
 
 The's a notion of *Title ID* in Kiwix Hotspot that's not really exposed anywhere so you'll have to construct them yourself:
@@ -117,8 +117,8 @@ BRANDING_SQUARE_LOGO_PATH = ""
 #
 # Title IDs for your ZIM files
 ZIM_TITLES = [
-    "openZIM:wikipedia_en_climate_change:nopic",
-    "openZIM:raspberrypi.stackexchange.com_en_all:all",
+    "openZIM:wikipedia_en_climate-change:nopic",
+    "openZIM:raspberrypi.stackexchange.com_en_all:",
 ]
 # Package IDs from
 # https:/github.com/offspot/offspot-config/blob/main/src/offspot_config/catalog.json
@@ -139,8 +139,8 @@ Preparing YAML Config file…
 > Adding Captive Portal
 > Adding Reverse-proxy
 > Adding ZIMs
->  - Adding openZIM:wikipedia_en_climate_change:nopic
->  - Adding openZIM:raspberrypi.stackexchange.com_en_all:all
+>  - Adding openZIM:wikipedia_en_climate-change:nopic
+>  - Adding openZIM:raspberrypi.stackexchange.com_en_all:
 > Adding Packages
 >  - Adding file-manager.offspot.kiwix.org
 > Adding Clock
