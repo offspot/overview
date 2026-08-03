@@ -6,6 +6,11 @@ A Kiwix Hotspot is a Raspberry Pi computer running a WiFi hotspot and serving co
 It's a software stack on top of a regular RaspberryPi OS but distributed as an image file.
 The resulting system can still be used freely.
 
+## Hardware Support
+
+Made for and tested on Raspberry Pi `3B` (802.11n only), `3B+`, `4B`, `400`, `5` and `500`.
+Those are arm64 devices with 1GB+ RAM.
+
 ➡️ **TUTORIAL:** [Create your own WiFi knowledge hub with Kiwix Hotspot](https://github.com/offspot/overview/blob/main/docs/Kiwix%20Hotspot%20Tutorial.md) ⬅️
 
 ---
