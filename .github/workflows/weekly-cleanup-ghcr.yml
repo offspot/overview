@@ -14,6 +14,6 @@ jobs:
         with:
           account: 'openzim'
           token: ${{ secrets.GITHUB_TOKEN }}
-          image-names: 'hwclock imager-worker kiwix-serve magoe mediawiki metrics reverse-proxy wikifundi wikifundi-en wikifundi-es wikifundi-fr'
+          image-names: 'adminui base-httpd captive-portal'
           tag-selection: untagged
           cut-off: 0s
