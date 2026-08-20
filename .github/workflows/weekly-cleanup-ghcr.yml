@@ -12,8 +12,8 @@ jobs:
       - name: Delete untagged container images
         uses: snok/container-retention-policy@v3.1.0
         with:
-          account: 'openzim'
+          account: 'offspot'
           token: ${{ secrets.GITHUB_TOKEN }}
-          image-names: 'adminui base-httpd captive-portal'
+          image-names: 'adminui base-httpd captive-portal cardshop-manager cardshop-scheduler content-filter dashboard edupi file-browser file-manager hwclock imager-worker kiwix-serve magoe mediawiki metrics reverse-proxy wikifundi wikifundi-en wikifundi-es wikifundi-fr'
           tag-selection: untagged
           cut-off: 0s
