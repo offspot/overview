@@ -14,6 +14,6 @@ jobs:
         with:
           account: 'openzim'
           token: ${{ secrets.GITHUB_TOKEN }}
-          image-names: 'adminui base-httpd captive-portal cardshop-manager cardshop-scheduler content-filter dashboard edupi file-browser file-manager hwclock imager-worker kiwix-serve magoe mediawiki metrics reverse-proxy wikifundi wikifundi-en wikifundi-es wikifundi-fr'
+          image-names: 'adminui base-httpd captive-portal cardshop-manager cardshop-scheduler content-filter dashboard edupi file-browser file-manager'
           tag-selection: untagged
           cut-off: 0s
