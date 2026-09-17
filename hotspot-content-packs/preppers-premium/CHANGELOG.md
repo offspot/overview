@@ -13,9 +13,11 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Scoutwiki
 - Australia, New Zealand, Europe, North America OSM
 
+
 ### Removed
 - TED Medical research, medical imaging, public health
 - Wikimed Medical Encyclopedia (smaller subset of MDwiki)
+- Survivor Library (until ZIM file is fixed)
   
 ## 2026-03-17
 
