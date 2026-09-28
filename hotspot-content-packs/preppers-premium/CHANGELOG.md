@@ -5,6 +5,16 @@ All notable changes to this content pack will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2026-09-28
+### Added
+- Army Pubs
+- Energypedia
+- Gutenberg Agriculture + Medicine shelves
+- Rabbit waves
+- S2 Underground
+- True Preppers
+- WikEM
+
 ## 2026-09-17
 ### Added
 - WikiVet
@@ -12,7 +22,6 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - OpSec Bible
 - Scoutwiki
 - Australia, New Zealand, Europe, North America OSM
-
 
 ### Removed
 - TED Medical research, medical imaging, public health
