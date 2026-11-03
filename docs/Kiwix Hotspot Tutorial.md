@@ -158,7 +158,7 @@ Your YAML configuration file is ready for next step.
 
 This step requires you to be **root on a GNU/Linux machine**. You can use WSL2 on Windows or Docker (`--privileged`) if you don't have access to a Linux machine.
 
-First, download the lastest version of [`image-creator`](https://github.com/offspot/image-creator) [from the drive](https://drive.offspot.it/image-creator/): `1.1.3` as I'm writing.
+First, download the lastest version of [`image-creator`](https://github.com/offspot/image-creator) [from the drive](https://drive.hotspot.kiwix.org/image-creator/): `1.1.3` as I'm writing.
 
 Make sure all requirements are satisfied:
 
@@ -223,7 +223,7 @@ It is recommended to use a cache for content which be downloaded, so that any su
 [2025-02-10 11:04:05] :: Enforcing Cache Policy
 [2025-02-10 11:04:05]    => No entry to evict
 [2025-02-10 11:04:05] :: Checking all Sources
-[2025-02-10 11:04:05]    => Checking https://drive.offspot.it/base/offspot-base-arm64-1.2.1.img  3.23 GiB
+[2025-02-10 11:04:05]    => Checking https://drive.hotspot.kiwix.org/base/offspot-base-arm64-1.2.1.img  3.23 GiB
 [2025-02-10 11:04:05]    => Checking https://mirror.download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64_2.4.1.zip  125.95 MiB
 [...]
 ```
