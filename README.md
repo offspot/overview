@@ -25,7 +25,7 @@ Using a dockerized approach is key in offering a clean, reliable and maintainabl
 
 Our Base OS is called `base-image` and is built on RaspberryOS Lite. Just like RaspberryOS, it is built using pi-gen.
 
-[`base-image`](https://github.com/offspot/base-image) is the repository holding our changes and script to build it. Its output is an IMG file. We host our releases at [drive.offspot.it/base/](https://drive.offspot.it/base/).
+[`base-image`](https://github.com/offspot/base-image) is the repository holding our changes and script to build it. Its output is an IMG file. We host our releases at [drive.hotspot.kiwix.org/base/](https://drive.hotspot.kiwix.org/base/).
 
 You can use it to create a different base image and use it when creating a Kiwix Hotspot. Be sure not to break our key components though.
 
